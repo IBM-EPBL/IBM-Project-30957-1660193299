@@ -1,0 +1,15 @@
+</html> style.css
+body
+{
+    background-color: rgb(102, 139, 34);
+}
+h2
+{
+    color: darkblue; background-color: white;
+}
+img{
+    border: 3px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+    width: 150px;
+}
