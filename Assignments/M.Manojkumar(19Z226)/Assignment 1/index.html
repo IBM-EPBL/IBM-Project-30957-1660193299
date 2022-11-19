@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <title>Document</title>
+    <script type="text/javascript">
+      function validate() {
+        var name = document.getElementById("name");
+        var DOB = document.getElementById("DOB");
+        var Qualification = document.getElementById("Qualification");
+        var Email = document.getElementById("Email");
+        var Password = document.getElementById("Password");
+        if (
+          name.value == "" ||
+          DOB.value == "" ||
+          Qualification.value == "" ||
+          Email.value == "" ||
+          Password.value == ""
+        ) {
+          alert("fill all the details");
+          return false;
+        } else {
+          return true;
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <section class="header"> 
+      <p>ASSIGNMENT-1</p>
+    </section>
+    <form class="form" onsubmit="validate()">
+      <div class="formin">
+        <div>
+          <label>Name</label>
+          <input type="text" placeholder="full name" id="name" />
+        </div>
+        <div>
+          <label>Date of Birth</label>
+          <input type="date" placeholder="DOB" id="DOB" />
+        </div>
+        <div>
+          <label>Qualification</label>
+          <input type="text" placeholder="Qualification" id="Qualification" />
+        </div>
+        <div>
+          <label>Email</label>
+          <input type="email" placeholder="Email" id="Email" />
+        </div>
+        <div>
+          <label>Password</label>
+          <input
+            type="password"
+            placeholder="Password"
+            id="Password"
+            pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$"
+          />
+        </div>
+        <center><button class="button" type="submit">Submit</button></center>
+      </div>
+    </form>
+  </body>
+</html>
